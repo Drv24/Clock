@@ -1,0 +1,64 @@
+<Label>:
+	font_name: 'Roboto'
+	markup: True
+	bold: True
+
+<RButton@Button>:
+	font_name: 'Roboto'
+	font_size: 20
+	bold: True
+	background_normal: 'bn.png'
+	background_down: 'bd.png'
+	border: (2,10,2,10)
+
+BoxLayout:
+	orientation: 'vertical'
+	Label:
+		text: 'CLOCK'
+		font_size: 60
+
+	Label:
+		id: time 
+		font_size: 50
+		bold: False
+    
+    Label:
+		text: 'STOPWATCH'
+		font_size: 60
+
+	BoxLayout:
+		orientation:'horizontal'
+		height: 80
+		padding: 20
+		spacing: 20
+		size_hint: (1,None)
+		RButton:
+			id: b1
+			text: 'Start'
+			on_press: app.start_st()
+		RButton:
+			id: b2
+			text: 'Pause'
+			on_press: app.pause_st()
+		RButton:
+			id: b3
+			text: 'Reset'
+			background_normal: 'rbn.png'
+			background_down: 'rbd.png'
+			border: (5,10,5,10)
+			on_press: app.reset_st()
+
+	BoxLayout:
+		orientation: 'horizontal'
+		height: 40
+		padding: 20
+		Label:
+			id: stopwatch
+			text: '00:00:[size=30]00[/size]'
+			font_size: 60
+
+			
+
+
+
+
